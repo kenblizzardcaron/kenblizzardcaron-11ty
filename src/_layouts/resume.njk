@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+    <head>
+        <meta charset="UTF-8">
+        <title>{{ site.title or title }}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta content="{{ keywords }}" name="keywords">
+        <meta content="{{ description }}" name="description">
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/images/favicons/apple-touch-icon.png' }}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/images/favicons/favicon-32x32.png' }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/images/favicons/favicon-16x16.png' }}">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="canonical" href="{{ site.canonical }}">
+        <meta property="og:locale" content="{{ site.locale }}">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="{{ title }}">
+        <meta property="og:description" content="{{ author.name }}, {{ author.title }}, {{ author.org }}">
+        <meta property="og:url" content="{{ site.url }}">
+        <meta property="og:site_name" content="{{ site.name }}">
+        <meta property="og:image" content="{{ author.image }}">
+        <meta property="og:image:width" content="500">
+        <meta property="og:image:height" content="500">
+        <meta property="og:image:type" content="image/jpeg">
+        <meta content="All" name="audience">
+        <meta content="index,follow" name="robots">
+        <link rel="stylesheet" href="{{ '/assets/css/styles.css' | url }}">
+    </head>
+    <body class="antialiased text-neutral-950 bg-neutral-50 leading-normal">
+        <div class="w-a4 h-a4 border p-4">
+            <section class="pb-2 grid p-0 grid-cols-3 justify-between">
+                <div class="text-start">
+                    <h1>{{ author.name }}</h1>
+                </div>
+                <div class="text-center">{{ author.printTelephone }}</div>
+                <div class="text-end">{{ author.email }}</div>
+                <div class="text-start">{{ author.location }}</div>
+                <div class="text-center"></div>
+                <div class="text-end">{{ author.website }}</div>
+            </section>
+            <section class="pb-2 text-xs">
+                <p>{{ author.statement }}</p>
+            </section>
+            <section class="pb-2 text-xs">
+                {% for skill in author.skills %}
+                    <h4 class="font-header font-semibold uppercase mt-2 mb-2">{{ skill.type }}</h4>
+                    <ul
+                        class="flex flex-wrap">
+                        {#% skill.tools.length %#}
+                        {% for tool in skill.tools|sort(attribute='language', reverse=false) %}
+                            <li class="relative inline-block mb-1 mr-1 ">
+                                <span class="FR">
+                                    {{ tool.language }}{% if not loop.last %},
+                                    {% endif %}
+                                </span>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% endfor %}
+            </section>
+            <section class="pb-2 text-xs">
+                <h4 class="font-header font-semibold uppercase mb-2">Work Experience</h4>
+            </section>
+            <section class="pb-2 text-xs">
+                <h4 class="font-header font-semibold uppercase mb-2">Education & Certifications</h4>
+            </section>
+        </div>
+    </body>
+</html></body></html>

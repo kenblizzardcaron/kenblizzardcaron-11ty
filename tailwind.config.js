@@ -18,6 +18,12 @@ module.exports = {
           950: "#451a03",
         },
       },
+      width: {
+        a4: '210mm', //794px
+      },
+      height: {
+        a4: '297mm', //1123px
+      },
     },
   },
   plugins: [],
