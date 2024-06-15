@@ -32,7 +32,11 @@
                 <div class="text-start">
                     <h1>{{ author.name }}</h1>
                 </div>
-                <div class="text-center">{{ author.printTelephone }}</div>
+                <div class="text-center">
+                    {% if author.openToWork %}
+                        {{ author.printTelephone }}
+                    {% endif %}
+                </div>
                 <div class="text-end">{{ author.email }}</div>
                 <div class="text-start">{{ author.location }}</div>
                 <div class="text-center"></div>
@@ -61,17 +65,42 @@
             </section>
             <section class="pb-2 text-xs">
                 <h4 class="font-header font-semibold uppercase mb-2">Work Experience</h4>
+                <ul class="pb-2 text-xs grid p-0 grid-cols-1 justify-between">
+                    {% for item in author.worksFor %}
+                        <li class="relative">
+                            <p class="font-bold">{{ item.companyName }}</p>
+                            <p class="font-bold">{{ item.title }}</p>
+                            <p class="mt-1">{{ item.time_start }} - {{ item.time_end }}</p>
+                            <p class="mt-1 mb-1">{{ item.more_info }}</p>
+                        </li>
+                    {% endfor %}
+                </ul>
             </section>
             <h4 class="font-header font-semibold uppercase mb-2">Education & Certifications</h4>
             <ul class="pb-2 text-xs grid p-0 grid-cols-2 justify-between">
-                {% for item in author.hasCredential %}
-                    <li class="relative">
+                {% for item in author.alumniOf %}
+                    <li class="relative mb-2">
                         <p class="font-bold">{{ item.certification }}</p>
                         <p class="mt-1">{{ item.org }}</p>
+                        {% if item.address %}
+                            {{ item.address.addressLocality }}, {{ item.address.addressRegion }}
+                        {% endif %}
                         <time datetime="{{ item.year }}" class="mt-1">{{ item.year }}</time>
                     </li>
                 {% endfor %}
-            </div>
+            </ul>
+            <ul class="pb-2 text-xs grid p-0 grid-cols-2 justify-between">
+                {% for item in author.hasCredential %}
+                    <li class="relative mb-2">
+                        <p class="font-bold">{{ item.certification }}</p>
+                        <p class="mt-1">{{ item.org }}</p>
+                        {% if item.address %}
+                            {{ item.addressLocality }}, {{ item.addressRegion }}
+                        {% endif %}
+                        <time datetime="{{ item.year }}" class="mt-1">{{ item.year }}</time>
+                    </li>
+                {% endfor %}
+            </ul>
         </section>
     </body>
-</html></div></body></html></body></html>
+</html></body></html></div></body></html></body></html>

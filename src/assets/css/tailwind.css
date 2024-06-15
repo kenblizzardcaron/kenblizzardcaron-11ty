@@ -3,19 +3,19 @@
 @tailwind utilities;
 
 .link {
-  @apply text-husky-800 hover:text-husky-500 dark:text-husky-300 dark:hover:text-husky-400 underline;
+  @apply text-emerald-800 hover:text-emerald-500 dark:text-emerald-300 dark:hover:text-emerald-400 underline;
 }
 
 .highlight {
-  @apply bg-husky-100 dark:bg-husky-900;
+  @apply bg-emerald-100 dark:bg-emerald-900;
 }
 
 .with-border {
-  @apply border border-husky-400 dark:border-husky-600;
+  @apply border border-emerald-400 dark:border-emerald-600;
 }
 
 .work-entry.current .dot {
-  @apply bg-husky-800 dark:bg-husky-800;
+  @apply bg-emerald-800 dark:bg-emerald-800;
 }
 
 .work-entry:nth-child(odd) {
