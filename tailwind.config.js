@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{njk,md}", "./src/**/*.svg"],
-  theme: {
+  theme: {      
     extend: {
       colors: {
         husky: {
@@ -24,6 +24,9 @@ module.exports = {
       height: {
         a4: '297mm', //1123px
       },
+      screens: {
+        'print': {'raw': 'print'},
+      }
     },
   },
   plugins: [],
