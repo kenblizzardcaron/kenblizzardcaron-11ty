@@ -32,11 +32,9 @@
     "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-img": "^3.1.8",
     "autoprefixer": "^10.4.16",
+    "netlify-plugin-generate-pdf": "^0.1.0",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.32",
     "tailwindcss": "^3.4.0"
-  },
-  "dependencies": {
-    "puppeteer-core": "^22.11.0"
   }
 }

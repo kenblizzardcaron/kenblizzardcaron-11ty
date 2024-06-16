@@ -1,0 +1,6 @@
+[[plugins]]
+  package = "netlify-plugin-generate-pdf"
+
+  [plugins.inputs]
+  # It has to begin with http
+  url="https://kenblizzardcaron.com/resume"
