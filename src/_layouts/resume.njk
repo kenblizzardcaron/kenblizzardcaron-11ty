@@ -111,8 +111,7 @@
                         {% for tool in skill.tools|sort(attribute='language', reverse=false) %}
                             <li class="relative inline-block mb-1 mr-1 ">
                                 <span class="FR">
-                                    {{ tool.language }}
-                                    {% if not loop.last %},
+                                    {{ tool.language }}{% if not loop.last %},
                                     {% endif %}
                                 </span>
                             </li>
