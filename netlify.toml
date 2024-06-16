@@ -4,3 +4,9 @@
   [plugins.inputs]
   # It has to begin with http
   url="https://kenblizzardcaron.com/resume"
+  fileName = "kenblizzardcaron.pdf"
+  [plugins.inputs.margin]
+    top = '0cm'
+    right = '0cm'
+    bottom = '0cm'
+    left = '0cm'
