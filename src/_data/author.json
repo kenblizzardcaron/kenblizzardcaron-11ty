@@ -3,7 +3,7 @@
   "openToWork": false,
   "shortName": "KBC",
   "org": "Indeed",
-  "image": "/assets/images/kenblizzardcaron.jpg",
+  "image": "/assets/images/kenblizzardcaron_384x384.webp",
   "title": "Senior UX Developer",
   "currentFocus": "UX Engineering",
   "location": "Houston, TX",
@@ -212,7 +212,7 @@
           "icon": ""
         },
         {
-          "language": "Drupal",
+          "language": "Lunacy",
           "icon": ""
         },
         {
@@ -220,7 +220,7 @@
           "icon": ""
         },
         {
-          "language": "Figma",
+          "language": "Figma/Lunacy",
           "icon": ""
         },
         {
