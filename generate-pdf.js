@@ -8,6 +8,9 @@ const puppeteer = require('puppeteer');
 const inputPath = path.join(__dirname, '_site', 'resume.md');
 const outputPath = path.join(__dirname, '_site', 'assets', 'pdf', 'kenblizzardcaron.pdf');
 
+// Ensure the output directory exists
+fs.mkdirSync(path.dirname(outputPath), { recursive: true });
+
 (async () => {
   // Read markdown
   const md = fs.readFileSync(inputPath, 'utf-8');
