@@ -10,7 +10,8 @@
     "dev:css": "tailwindcss -i src/assets/css/tailwind.css -o _site/assets/css/styles.css --watch --postcss",
     "build:11ty": "eleventy",
     "build:css": "tailwindcss -i src/assets/css/tailwind.css -o _site/assets/css/styles.css --postcss",
-    "build:pdf": "node generate-pdf.js"
+    "build:pdf": "node generate-pdf.js",
+    "postinstall": "node node_modules/puppeteer/install.js"
   },
   "keywords": [
     "template",
@@ -36,10 +37,10 @@
     "netlify-plugin-generate-pdf": "^0.1.0",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.32",
-    "tailwindcss": "^3.4.0"
+    "tailwindcss": "^3.4.0",
+    "puppeteer": "^24.15.0"
   },
   "dependencies": {
-    "markdown-it": "^14.1.0",
-    "puppeteer": "^24.15.0"
+    "markdown-it": "^14.1.0"
   }
 }
