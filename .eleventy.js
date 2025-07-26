@@ -7,7 +7,7 @@ module.exports = function (eleventyConfig) {
     "./src/site.webmanifest": "site.webmanifest",
   });
   eleventyConfig.addPassthroughCopy({
-    "./_site/assets/pdf/kenblizzardcaron.pdf": "kenblizzardcaron.pdf",
+    "src/assets/pdf/kenblizzardcaron.pdf": "kenblizzardcaron.pdf",
   });
 
   return {

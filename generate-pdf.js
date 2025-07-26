@@ -6,7 +6,7 @@ const markdownIt = require('markdown-it');
 const puppeteer = require('puppeteer');
 
 const inputPath = path.join(__dirname, '_site', 'resume.md');
-const outputPath = path.join(__dirname, '_site', 'assets', 'pdf', 'kenblizzardcaron.pdf');
+const outputPath = path.join(__dirname, '_site', 'kenblizzardcaron.pdf');
 
 // Ensure the output directory exists
 fs.mkdirSync(path.dirname(outputPath), { recursive: true });

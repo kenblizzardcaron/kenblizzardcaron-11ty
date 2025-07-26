@@ -78,7 +78,7 @@
   ],
   "worksFor": [
     {
-      "companyName": "Indeed.com",
+      "companyName": "Indeed",
       "title": "Staff Software Engineer",
       "time_start": "2025",
       "time_end": "Present",
@@ -94,7 +94,7 @@
       "isCurrent": true
     },
     {
-      "companyName": "Indeed.com",
+      "companyName": "Indeed",
       "title": "Senior UX Developer",
       "time_start": "2022",
       "time_end": "2025",
@@ -110,7 +110,7 @@
       "isCurrent": false
     },
     {
-      "companyName": "Indeed.com",
+      "companyName": "Indeed",
       "title": "UX Developer",
       "time_start": "2019",
       "time_end": "2022",
