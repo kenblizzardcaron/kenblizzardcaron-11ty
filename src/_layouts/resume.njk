@@ -104,21 +104,16 @@
                 <p>{{ author.statement }}</p>
             </section>
             <section class="pb-2 text-xs">
-                {% for skill in author.skills %}
-                    <h4 class="font-header font-semibold uppercase mt-2 mb-2">{{ skill.type }}</h4>
-                    <ul
-                        class="flex flex-wrap">
-                        {#% skill.tools.length %#}
-                        {% for tool in skill.tools|sort(attribute='language', reverse=false) %}
-                            <li class="relative inline-block mb-1 mr-1 ">
-                                <span class="FR">
-                                    {{ tool.language }}{% if not loop.last %},
-                                    {% endif %}
-                                </span>
-                            </li>
-                        {% endfor %}
-                    </ul>
-                {% endfor %}
+                <h4 class="font-header font-semibold uppercase mt-2 mb-2">Technical Skills</h4>
+                <ul class="flex flex-wrap">
+                    {% for skill in author.skills|sort %}
+                        <li class="relative inline-block mb-1 mr-1">
+                            <span class="FR">
+                                {{ skill }}{% if not loop.last %},{% endif %}
+                            </span>
+                        </li>
+                    {% endfor %}
+                </ul>
             </section>
             <section class="pb-2 text-xs">
                 <h4 class="font-header font-semibold uppercase mb-2">Work Experience</h4>
@@ -133,7 +128,7 @@
                     {% endfor %}
                 </ul>
             </section>
-            <h4 class="font-header font-semibold uppercase mb-2">Education & Certifications</h4>
+            <h4 class="font-header font-semibold uppercase mb-2">Education</h4>
             <ul class="pb-2 text-xs grid p-0 grid-cols-3 justify-between">
                 {% for item in author.alumniOf %}
                     <li class="relative mb-2">
@@ -142,9 +137,14 @@
                         {% if item.address %}
                             {{ item.address.addressLocality }}, {{ item.address.addressRegion }}
                         {% endif %}
-                        <time datetime="{{ item.year }}" class="mt-1">{{ item.year }}</time>
+                        <time datetime="{{ item.year_start }}" class="mt-1">{{ item.year_start }}</time>
+                        -
+                        <time datetime="{{ item.year_end }}" class="mt-1">{{ item.year_end }}</time>
                     </li>
                 {% endfor %}
+            </ul>
+            <h4 class="font-header font-semibold uppercase mb-2">Certifications</h4>
+            <ul class="pb-2 text-xs grid p-0 grid-cols-3 justify-between">
                 {% for item in author.hasCredential %}
                     <li class="relative mb-2">
                         <p class="font-bold">{{ item.certification }}</p>
