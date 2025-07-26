@@ -12,7 +12,7 @@ encoding: utf-8
 
 ---
 
-{{ author.statement }}
+{{ author.statement | safe }}
 
 ## Technical Skills
 {{ author.skills | join(", ") }}
@@ -21,7 +21,7 @@ encoding: utf-8
 {% for job in author.worksFor %}
 ### {{ job.title }} - {{ job.companyName }}
 {{ job.time_start }} - {{ job.time_end }}  
-{{ job.more_info }}
+{{ job.more_info | safe}}
 {% endfor %}
 
 ## Education
