@@ -1,0 +1,39 @@
+---
+permalink: "/resume.md"
+layout: null
+content-type: text/plain; charset=utf-8
+encoding: utf-8
+---
+
+# {{ author.name }}
+
+**{{ author.title }}**
+{{ author.location }}
+{{ author.email }} | {{ author.website }}
+
+---
+
+{{ author.statement | safe }}
+
+## Technical Skills
+{{ author.skills | sort | join(", ") }}
+
+## Work Experience
+{% for item in author.worksFor %}
+### {{ item.title }} - {{ item.companyName }}
+{{ item.time_start }} - {{ item.time_end }}
+{{ item.more_info | safe }}
+{% endfor %}
+
+## Education
+{% for item in author.alumniOf %}
+- {{ item.certification | safe }}
+  {{ item.org }} ({{ item.year_start }} - {{ item.year_end }})
+  {% if item.address %}{{ item.address.addressLocality }}, {{ item.address.addressRegion }}{% endif %}
+{% endfor %}
+
+## Certifications
+{% for item in author.hasCredential %}
+- {{ item.certification }}
+  {{ item.org }} ({{ item.year }})
+{% endfor %}

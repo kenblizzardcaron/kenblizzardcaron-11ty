@@ -1,12 +1,1 @@
 [[plugins]]
-  package = "netlify-plugin-generate-pdf"
-
-  [plugins.inputs]
-  # It has to begin with http
-  url="https://kenblizzardcaron.com/resume"
-  fileName = "kenblizzardcaron.pdf"
-  [plugins.inputs.margin]
-    top = '0.5cm'
-    right = '0.5cm'
-    bottom = '0.5cm'
-    left = '0.5cm'
