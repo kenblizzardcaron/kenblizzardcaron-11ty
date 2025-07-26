@@ -25,7 +25,8 @@ encoding: utf-8
 {% endfor %}
 
 ## Education
-{% for edu in author.alumniOf | safe %}- {{ edu.certification }}  
+{% for edu in author.alumniOf  %}
+- {{ edu.certification | safe }}  
   {{ edu.org }} ({{ edu.year_start }} - {{ edu.year_end }})  
   {{ edu.address.addressLocality }}, {{ edu.address.addressRegion }}
 {% endfor %}
