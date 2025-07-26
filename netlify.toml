@@ -1,2 +1,5 @@
 [[redirects]]
-  /*   https://www.example.com/:splat  301!
+  from = "/*"
+  to = "https://www.example.com/:splat"
+  status = 301
+  force = true
