@@ -1,0 +1,55 @@
+---
+permalink: /resume.html
+layout: null
+---
+
+# Ken Blizzard-Caron
+
+**Software Engineer**  
+Denver Metropolitan Area  
+ken@blizzardcaron.com | kenblizzardcaron.com
+
+---
+
+I'm a dedicated Colorado-based engineer. I have over 15 years of professional experience developing for the web, with a lean towards front end. I'm also a husband, father, hobby coffee roaster, vegan, and slow runner. Contently employed at Indeed.
+
+## Technical Skills
+11ty, Accessibility, Agentic AI / Cursor / Copilot, Agile Methodologies, Angular, Apollo, CI/CD, CSS 3, Docker, Emotion, Express, Figma/Lunacy, Gatsby, Git, Gitlab CI, GraphQL, HTML 5, Internationalization, Jamstack, JavaScript, Jenkins, Jest, Jira, Kubernetes, LangChain, Laravel, Micro-frontends, Microservices, MongoDB, MySQL, Netlify, NodeJS, NumPy, PHP, Python, PyTorch, React Testing Library, React, RWD, Screen Readers, Security, SEO, Tailwind, TypeScript, User Experience, WCAG, Web Components, Web Performance, Webpack, WordPress
+
+## Work Experience
+### Staff Software Engineer - Indeed
+2025 - Present  
+Engineering solutions for employers to discover and hire talent with emerging technology.
+
+### Senior UX Developer - Indeed
+2022 - 2025  
+Mentored associate and mid-level engineers. Key engineer for launching Smart Sourcing, a new experience that matches job seekers with employers with AI technology. Currently working on high-profile company objectives within the Employer Journey organization for an exciting new experience. Leads a development team solving accessibility and UX remediation.
+
+### UX Developer - Indeed
+2019 - 2022  
+The world's most popular job site. Increased hire signals for employers that manage job listings. Led migration of making our enterprise web application follow RWD (Responsive Web Design) principles and be accessible for all. Led development of an Employer Reputation dashboard, empowering best practices and open communication between job seekers and employers.
+
+### Front End Engineer - PlumRiver LLC
+2018 - 2019  
+Ecommerce B2B that acquired CenterStoneTechnologies in the athletic apparel industry with many high profile clients including Volcom, Puma, and Timberland. Successfully engineered merging of the CenterStone iVendix platform with the React-based Elastic Suite platform.
+
+### Web Development Engineer - CenterStone Technologies, Inc.
+2014 - 2018  
+Successful Enterprise ecommerce B2B in the athletic apparel industry with many high profile clients including New Balance, Patagonia, and The North Face. Led full-stack migration of a legacy ColdFusion web application to a MEAN (Mongo/Express/Angular/Node) SPA (Single Page Application).
+
+### Available upon inquiry - Prior work
+2009 - 2014  
+This experience represents the start of my career out of college. Begins with my experience at a small indie game company, to my pivot into web in the Boulder tech startup scene. Companies include a genealogy search engine: Mocavo, a non-profit charity platform: Giveo, and an advertising agency: rabble+rouser.
+
+## Education
+- Bachelor's Degree: Electronic Game & Interactive Development  
+  Champlain College (2005 - 2009)  
+  Burlington, VT
+
+## Certifications
+- Nanodegree: Indeed AI Upskilling for Software Engineers  
+  Udacity (2025)
+- Web Accessibility Specialist  
+  International Association of Accessibility Professionals (2023)
+- Professional Certificate: C++  
+  Champlain College (2009)
