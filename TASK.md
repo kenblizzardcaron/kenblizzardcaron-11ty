@@ -1,0 +1,1 @@
+The dark/light mode toggle doesn't seem to actually change the styles. I can still see the styles change when changing light mode or dark mode on the OS, but not via the toggle.
