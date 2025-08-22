@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{njk,md}", "./src/**/*.svg"],
+  darkMode: 'class', // Enable dark mode via class strategy
   theme: {      
     extend: {
       colors: {

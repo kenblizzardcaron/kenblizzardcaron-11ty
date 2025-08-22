@@ -28,7 +28,12 @@
     <meta content="index,follow" name="robots">
     <link rel="stylesheet" href="{{ '/assets/css/styles.css' | url }}">
   </head>
-  <body class="antialiased text-emerald-950 bg-emerald-50 dark:bg-emerald-950 dark:text-emerald-50 leading-normal font-text text-front transition-color duration-200 ease-in-out">
+  <body class="antialiased text-emerald-950 bg-emerald-50 dark:bg-emerald-950 dark:text-emerald-50 leading-normal font-text text-front transition-color duration-200 ease-in-out" id="body">
+    <div class="fixed top-4 right-4 z-50">
+      <button id="theme-toggle" class="p-2 bg-emerald-200 dark:bg-emerald-800 text-emerald-900 dark:text-emerald-100 shadow transition-colors duration-200">
+        <span id="theme-toggle-icon">Toggle color scheme</span>
+      </button>
+    </div>
     {% include "partials/_header.njk" %}
     <div class="md:max-w-screen-sm lg:max-w-screen-xl mx-auto px-4 flex flex-wrap pt-4 my-8">
       {% include "partials/_aside.njk" %}
@@ -44,5 +49,61 @@
     </div>
     {% include "partials/_footer.njk" %}
     {% include "partials/_schema_org.njk" %}
+    <script>
+      // Robust theme toggle logic: always override SSR/OS if user toggles
+      (function() {
+        const storageKey = 'theme-preference';
+        const toggleBtn = document.getElementById('theme-toggle');
+        const icon = document.getElementById('theme-toggle-icon');
+        const darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
+
+        function setTheme(theme) {
+          if (theme === 'dark') {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        }
+
+        function getStoredTheme() {
+          return sessionStorage.getItem(storageKey);
+        }
+
+        function getPreferredTheme() {
+          const stored = getStoredTheme();
+          if (stored === 'light' || stored === 'dark') return stored;
+          return darkQuery.matches ? 'dark' : 'light';
+        }
+
+        // Remove SSR/OS class if user has a preference
+        function enforceStoredTheme() {
+          const stored = getStoredTheme();
+          if (stored === 'light' || stored === 'dark') {
+            setTheme(stored);
+          } else {
+            setTheme(getPreferredTheme());
+          }
+        }
+
+        // Initial theme
+        enforceStoredTheme();
+
+        // Listen for OS changes, but only update if user hasn't toggled
+        darkQuery.addEventListener('change', () => {
+          if (!getStoredTheme()) enforceStoredTheme();
+        });
+
+        // Toggle button
+        toggleBtn.addEventListener('click', () => {
+          const current = getPreferredTheme();
+          const next = current === 'dark' ? 'light' : 'dark';
+          sessionStorage.setItem(storageKey, next);
+          setTheme(next);
+        });
+
+        // Always apply the stored theme on page load
+        enforceStoredTheme();
+      })();
+    </script>
   </body>
 </html>
