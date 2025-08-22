@@ -30,8 +30,8 @@
   </head>
   <body class="antialiased text-emerald-950 bg-emerald-50 dark:bg-emerald-950 dark:text-emerald-50 leading-normal font-text text-front transition-color duration-200 ease-in-out" id="body">
     <div class="fixed top-4 right-4 z-50">
-      <button id="theme-toggle" aria-label="Toggle dark mode" class="rounded-full p-2 bg-emerald-200 dark:bg-emerald-800 text-emerald-900 dark:text-emerald-100 shadow transition-colors duration-200">
-        <span id="theme-toggle-icon">🌙</span>
+      <button id="theme-toggle" class="p-2 bg-emerald-200 dark:bg-emerald-800 text-emerald-900 dark:text-emerald-100 shadow transition-colors duration-200">
+        <span id="theme-toggle-icon">Toggle color scheme</span>
       </button>
     </div>
     {% include "partials/_header.njk" %}
@@ -60,10 +60,8 @@
         function setTheme(theme) {
           if (theme === 'dark') {
             document.documentElement.classList.add('dark');
-            icon.textContent = '☀️';
           } else {
             document.documentElement.classList.remove('dark');
-            icon.textContent = '🌙';
           }
         }
 
